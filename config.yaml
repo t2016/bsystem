@@ -1,0 +1,34 @@
+db:
+  - host: 10.10.1.8
+  - database: db_packages
+  - user: user1
+  - pass: password
+  - port: 5432
+  - encoding: ansi
+  - table: packages72
+  - options: -e
+  - err: err72
+  - ok: ok72
+
+dist: el7
+
+blist: build.list
+elist: err.txt
+
+
+wsrc: http://10.10.3.4/public/el7/os-7.2/SRPMS
+
+rhost: 10.10.3.4
+
+repository:
+  - buildsys: http://10.10.3.4/public/buildsys
+  - jbeap: http://10.10.3.4/public/el7/ftp.redhat.com/pub/redhat/linux/enterprise/7Server/en/JBEAP
+
+modules:
+  - mock
+  - ccache
+  - createrepo
+  - perl-WWW-Mechanize
+  - perl-Config-YAML
+  - perl-DBI
+  - perl-DBD-Pg
